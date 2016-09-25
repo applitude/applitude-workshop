@@ -1,7 +1,12 @@
+# Swift 3 Cheat Sheet <img align="right" src="http://www.applitude.no/static/img/banner.svg" height="45"></div>
+
 ### Constants and variables
 
 ```swift
-let implicitInt = 42      ~       let implicitDouble = 42.0        ~       let explicitDouble: Double = 42
+let implicitInt = 42
+let implicitDouble = 42.0
+let explicitDouble: Double = 42
+let countableRange = 0 ..< 420
 
 var mutableStringArray = ["I'm", "a", "variable"]
 mutableStringArray.append("😈")
@@ -19,9 +24,18 @@ if let firstCharacter = optionalString?.characters.first {
 ```swift
 if someBool {} else if someOtherBool {} else {}
 
-for item in someCollection {                                for index in 0 ..< someCollection.count {
-    print(item.someProperty)                ~                   print(someCollection[index].someProperty)
-}                                                           }
+for index in 0 ..< someCollection.count {
+    print(someCollection[index].someProperty)
+}
+
+for item in someCollection {
+    print(item.someProperty)
+}
+
+for primeNumber in countableRange where primeNumber.isPrime {
+    print(primeNumber)     // 2, 3, 5, 7, 11, 13 ... 419
+}
+
 ```
 
 ### Methods
@@ -72,4 +86,19 @@ struct Coordinate {
 
 let myPokestop1 = Pokestop(name: "Name1", location: Coordinate(lat: 30, long: 70))
 let myPokestop2 = Pokestop(name: "Name2", location: Coordinate(lat: 30, long: 70), hasLure: true)
+```
+
+### Extensions and computed properties
+
+```swift
+extension String {
+    var isUppercase: Bool {
+        for character in self.characters {
+            if character >= Character("a") && character <= Character("z") { return false }
+        }
+        return true
+    }
+}
+
+print("AB5~DWZ-1".isUppercase)      // true
 ```
