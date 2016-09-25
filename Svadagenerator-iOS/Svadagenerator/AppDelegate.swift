@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Svadagenerator
-//
-//  Created by Gaute Solheim on 25.09.2016.
-//  Copyright © 2016 Applitude. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

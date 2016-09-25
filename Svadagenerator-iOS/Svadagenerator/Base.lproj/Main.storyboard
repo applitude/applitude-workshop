@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Svadagenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="VF1-kH-OHx" userLabel="Svada Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtJ-39-Prb" userLabel="Bottom View">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr7-yo-qaJ" userLabel="Generate Button">
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        <state key="normal" title="Gi meg svada!"/>
+                                        <connections>
+                                            <action selector="generateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQK-QR-40W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Zr7-yo-qaJ" firstAttribute="width" relation="lessThanOrEqual" secondItem="AtJ-39-Prb" secondAttribute="width" multiplier="0.8" id="5bK-jx-5E2"/>
+                                    <constraint firstItem="Zr7-yo-qaJ" firstAttribute="centerY" secondItem="AtJ-39-Prb" secondAttribute="centerY" id="RPx-oa-Ra9"/>
+                                    <constraint firstItem="Zr7-yo-qaJ" firstAttribute="height" relation="lessThanOrEqual" secondItem="AtJ-39-Prb" secondAttribute="height" multiplier="0.85" id="hif-Je-fTx"/>
+                                    <constraint firstItem="Zr7-yo-qaJ" firstAttribute="centerX" secondItem="AtJ-39-Prb" secondAttribute="centerX" id="mSr-gg-5Fq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AtJ-39-Prb" firstAttribute="top" secondItem="VF1-kH-OHx" secondAttribute="bottom" id="0R6-9K-bSk"/>
+                            <constraint firstItem="VF1-kH-OHx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="1K0-K1-c2d"/>
+                            <constraint firstItem="VF1-kH-OHx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="57N-RW-fwW"/>
+                            <constraint firstItem="AtJ-39-Prb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HHV-KA-uYn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AtJ-39-Prb" secondAttribute="bottom" id="MFW-BF-GfU"/>
+                            <constraint firstItem="VF1-kH-OHx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.65" id="elY-Ft-eJR"/>
+                            <constraint firstAttribute="trailing" secondItem="AtJ-39-Prb" secondAttribute="trailing" id="hF8-91-Ppe"/>
+                            <constraint firstAttribute="trailing" secondItem="VF1-kH-OHx" secondAttribute="trailing" constant="40" id="q4m-qA-HVN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="generateButton" destination="Zr7-yo-qaJ" id="dFy-Il-9OZ"/>
+                        <outlet property="svadaLabel" destination="VF1-kH-OHx" id="Xku-4E-39f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="113.79310344827587"/>
         </scene>
     </scenes>
 </document>
