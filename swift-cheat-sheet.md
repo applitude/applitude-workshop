@@ -6,6 +6,7 @@
 let implicitInt = 42
 let implicitDouble = 42.0
 let explicitDouble: Double = 42
+
 let countableRange = 0 ..< 420
 
 var mutableStringArray = ["I'm", "a", "variable"]
@@ -45,10 +46,10 @@ func doSomething() {}
 
 func doAndReturnSomething(string1: String, string2: String) -> String {
     // Some clever code
-    return newString
+    return someString
 }
 
-func doAndReturnManyThings(string: String) -> (String, String, Int) {
+func doAndReturnManyThings(string: String) -> (someString: String, someOtherString: String, someInt: Int) {
     // Some clever code
     return (someString, someOtherString, someInt)
 }
@@ -57,7 +58,7 @@ doSomething()
 let someThing = doAndReturnSomething(string1: "A", string2: "B")
 let manyThings = doAndReturnManyThings(string: "C")
 
-print("Many things: \(manyThings.0), \(manyThings.1), \(manyThings.2)")
+print("Many things: \(manyThings.someString), \(manyThings.someOtherString), \(manyThings.someInt)")
 ```
 
 ### Classes and structures
@@ -84,8 +85,8 @@ struct Coordinate {
     // (Methods)
 }
 
-let myPokestop1 = Pokestop(name: "Name1", location: Coordinate(lat: 30, long: 70))
-let myPokestop2 = Pokestop(name: "Name2", location: Coordinate(lat: 30, long: 70), hasLure: true)
+let pokestop1 = Pokestop(name: "Name1", location: Coordinate(lat: 30, long: 70))
+let pokestop2 = Pokestop(name: "Name2", location: Coordinate(lat: 30, long: 70), hasLure: true)
 ```
 
 ### Extensions and computed properties
