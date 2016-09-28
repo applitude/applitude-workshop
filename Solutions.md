@@ -1,6 +1,6 @@
 #Løsningsforslag <img align="right" src="http://www.applitude.no/static/img/banner.svg" height="45"></div>
 
-# Disclaimer
+###### Disclaimer
 You would most likely have to be googeling a bit to solve many of these tasks. In fact, we encourage you to. We'll be strolling around, happy to answer any questions you may have! :)
 
 We decided to have the set of tasks written in English, since we know some of you are international students.
@@ -39,3 +39,4 @@ The problem now is that we have to initialize this variable with the instance of
 
 ![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%204%20...png)
  
+![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%204%20..png)
