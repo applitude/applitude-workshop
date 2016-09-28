@@ -1,5 +1,10 @@
 #Løsningsforslag <img align="right" src="http://www.applitude.no/static/img/banner.svg" height="45"></div>
 
+# Disclaimer
+You would most likely have to be googeling a bit to solve many of these tasks. In fact, we encourage you to. We'll be strolling around, happy to answer any questions you may have! :)
+
+We decided to have the set of tasks written in English, since we know some of you are international students.
+
 ### Oppgave 1a
 
 Here we have two different solutions. We could do this graphically in XCode which would probably be the easiest solution. In the right corner you have this navigation bar with some options to play with when you have selected the label in the storyboard file
@@ -23,3 +28,14 @@ In this case we unfortunately ahve to use a somewhat nasty function that swift h
 ![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%202b.png)
 
 ### Oppgave 4
+
+In our AppDelegate file, we have many different methods for different situations related to how the os would handle things. You can read all about them in the file itself, in fact. One of the functions, called applicationWillEnterForeground is executed when the app is going from an inactive state (i.e running in the background) to an active state (i.e opening the app again). This is the function where we would have to update our view from. The problem is that we have to reference what's in our ViewController in order to update the view, that's where our core functionality is. We do that by declaring a reference like this, in the top of the AppDelegate class
+
+![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%204.png)
+
+We basically declare a variable with the type ViewController. The exclamation mark is related to something called Optionals, which is an ingenious way of making our code safe. You can ask us, or read more about it online if you're interested. 
+
+The problem now is that we have to initialize this variable with the instance of the ViewController that our application is running. We do that by heading over to our ViewController class and edit our viewDidLoad method. So, to reference our variable referenceToVC declared in AppDelegate, we have to get a reference to our AppDelegate. We initialize a variable with these mystic properties. And we set our referenceToVC to be self (self is explained in an earlier example).
+
+![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%204%20...png)
+ 
