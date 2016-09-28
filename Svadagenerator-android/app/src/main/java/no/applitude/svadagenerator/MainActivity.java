@@ -1,10 +1,8 @@
 package no.applitude.svadagenerator;
 
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -20,18 +18,16 @@ public class MainActivity extends AppCompatActivity {
     };
     private TextView svadaText;
     Random random;
-    RelativeLayout activity_main;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         svadaText = (TextView)findViewById(R.id.svadaText);
         random = new Random();
-        activity_main = (RelativeLayout) findViewById(R.id.activity_main);
-        generator();
+
     }
 
-    public void generator(){
+    public void onClick(View v){
         String txt = "";
         for(int i=0; i<svadaArray.length; i++) {
             if(i > 0){
@@ -42,15 +38,5 @@ public class MainActivity extends AppCompatActivity {
         }
         txt += ".";
         svadaText.setText(txt);
-    }
-
-    public void onClick(View v){
-        generator();
-
-        int color = Color.argb(255,
-                random.nextInt(256),
-                random.nextInt(256),
-                random.nextInt(256));
-        activity_main.setBackgroundColor(color);
     }
 }
