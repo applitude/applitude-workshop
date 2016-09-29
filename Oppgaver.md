@@ -18,6 +18,14 @@ Hint for iOS: Se i XCode sin GUI eller se på klassene UIColor og UIFont og egen
 
 Hint for Android: activity_main.xml
 
+### Oppgave 1c
+
+Erstatt knapp med et bilde. Bilde dere kan bruke eksisterer i resources.
+
+Hint for iOS: se på dropdown i attributes inspector
+
+Hint for Android: 
+
 ### Oppgave 2a
 
 Endre bakgrunnsfargen til applikasjonen
