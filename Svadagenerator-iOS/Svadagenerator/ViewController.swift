@@ -14,26 +14,47 @@ class ViewController: UIViewController {
     
     private let colors = [UIColor.blue, UIColor.white, UIColor.brown, UIColor.red, UIColor.orange, UIColor.green, UIColor.purple, UIColor.cyan, UIColor.yellow]
     
+    private let userDef = UserDefaults.standard
+    
     @IBOutlet private var svadaLabel: UILabel!
     @IBOutlet private var generateButton: UIButton!
     
     @IBAction func generateButtonTapped(_ sender: UIButton) {
-        oppdaterSvadaView();
+        updateSvadaView();
     }
     
-    public func oppdaterSvadaView() {
-        let randomIndeks = Int(arc4random_uniform(UInt32(colors.count)));
-        self.view.backgroundColor = colors[randomIndeks];
+    public func updateSvadaView() {
+        let randomIndex = Int(arc4random_uniform(UInt32(colors.count)));
+        self.view.backgroundColor = colors[randomIndex];
     
+        svadaLabel.font = svadaLabel.font.withSize(20)
+        svadaLabel.textColor = UIColor.green
+        
+        saveBeforeQuit();
+        
         svadaLabel.text = generateSentence()
     }
-
+    
+    public func saveBeforeQuit() {
+        userDef.set(svadaLabel.text, forKey: "Svada")
+        
+        userDef.set(NSKeyedArchiver.archivedData(withRootObject: self.view.backgroundColor), forKey: "Bc color")
+    }
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let svada = userDef.object(forKey: "Svada") {
+            svadaLabel.text = svada as? String
+        }
+        
+        if let colorData = userDef.object(forKey: "Bc color") {
+            self.view.backgroundColor = NSKeyedUnarchiver.unarchiveObject(with: colorData as! Data) as? UIColor
+        }
+        
         let appDelegateRef = UIApplication.shared.delegate as! AppDelegate
         
-        appDelegateRef.referanseTilVc = self;
-        
-        super.viewDidLoad()
+        appDelegateRef.referenceToVC = self;
         
         // Do any additional setup after loading the view, typically from a nib.
     }
