@@ -1,4 +1,4 @@
-Oppgaver <img align="right" src="http://www.applitude.no/static/img/banner.svg" height="45"></div>
+#Oppgaver <img align="right" src="http://www.applitude.no/static/img/banner.svg" height="45"></div>
 
 ###### Disclaimer
 You would most likely have to be googeling a bit to solve many of these tasks. In fact, we encourage you to. We'll be strolling around, happy to answer any questions you may have! :)
