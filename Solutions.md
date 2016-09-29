@@ -35,8 +35,12 @@ In our AppDelegate file, we have many different methods for different situations
 
 We basically declare a variable with the type ViewController. The exclamation mark is related to something called Optionals, which is an ingenious way of making our code safe. You can ask us, or read more about it online if you're interested. 
 
-The problem now is that we have to initialize this variable with the instance of the ViewController that our application is running. We do that by heading over to our ViewController class and edit our viewDidLoad method. So, to reference our variable referenceToVC declared in AppDelegate, we have to get a reference to our AppDelegate. We initialize a variable with these mystic properties. And we set our referenceToVC to be self (self is explained in an earlier example).
+The problem now is that we have to initialize this variable with the instance of the ViewController that our application is running. We do that by heading over to our ViewController class and edit our viewDidLoad method. So, to reference our variable referenceToVC declared in AppDelegate, we have to get a reference to our AppDelegate. We initialize the variable «appDelegateRef» with these mystic properties that are basically getting a reference to our AppDelegate. The essence is that we get our UIApplication shared delegate, but we don't know in the code if that delegate is the AppDelegate class, so we have to force cast it. Delegates are a powerful and somewhat advanced concept, we'd recommend everyone to take a look at it sometime. Lastly we set our referenceToVC to be self (self is explained in an earlier example). 
 
 ![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%204%20...png)
+
+We also have to move the code central to updating the view into it's own function instead of having it in the method that is triggered by the button. This makes it easier for us to call it from AppDelegate. 
+
+Finally we have to call the function from AppDelegate. We use our reference and call it as a method on the ViewController object. And that's it!
  
 ![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%204%20..png)
