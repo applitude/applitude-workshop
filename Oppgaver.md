@@ -7,6 +7,7 @@ Du må mest sannsynlig google en del for å løse mange av disse oppgavene. Vi o
 Endre slik at applikasjonen også laster inn en ny svadasetning når applikasjonen åpnes
 
 Hint for iOS: endre viewDidLoad metoden
+
 Hint for Android: flytt kode inn på ny metode
 
 ### Oppgave 1b
@@ -14,6 +15,7 @@ Hint for Android: flytt kode inn på ny metode
 Endre tekstfargen og tekststørrelsen på svadageneratoren
 
 Hint for iOS: Se i XCode sin GUI eller se på klassene UIColor og UIFont og egenskapene til en label
+
 Hint for Android: activity_main.xml
 
 ### Oppgave 2a
@@ -21,6 +23,7 @@ Hint for Android: activity_main.xml
 Endre bakgrunnsfargen til applikasjonen
 
 Hint for iOS: Dette kan gjøres grafisk eller i koden
+
 Hint for Android: endre farge til relativelayout eller se i activity_main.xml
 
 ### Oppgave 2b
@@ -28,6 +31,7 @@ Hint for Android: endre farge til relativelayout eller se i activity_main.xml
 Endre fra oppgave 2a slik at bakgrunnsfargen endres til nye farger etterhvert som brukeren henter nye svadasetninger
 
 Hint for iOS: Se på UIColor klassen og arc4random funksjonen
+
 Hint for Android: import java.util.Random. Color.argb() kan også være nyttig.
 
 ### Oppgave 3a
