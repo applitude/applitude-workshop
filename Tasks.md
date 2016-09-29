@@ -21,6 +21,14 @@ Hint for iOS: Take a look at the storyboard file and do it graphically, or look 
 
 Hint for Android: activity_main.xml
 
+### Oppgave 1c
+
+Replace the button with an image. We have some images you could use in our resource folder
+
+Hint for iOS: look at the dropdown in the attributes inspector
+
+Hint for Android: 
+
 ### Oppgave 2a 
 
 Change the background color of the application
