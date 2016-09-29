@@ -9,26 +9,35 @@ We decided to have the set of tasks written in English, since we know some of yo
 
 Change the application so that it generates a new svada sentence when the application launches
 
-Hint: change the viewDidLoad method in the ViewController class
+Hint for iOS: change the viewDidLoad method in the ViewController class
+
+Hint for Android: move code into new method
 
 ### Oppgave 1b
 
 Change the text color and text size of the svada generator
 
-Hint: Take a look at the storyboard file and do it graphically, or look up UIColor and UIFont and the properties of a label in Swift
+Hint for iOS: Take a look at the storyboard file and do it graphically, or look up UIColor and UIFont and the properties of a label in Swift
+
+Hint for Android: activity_main.xml
 
 ### Oppgave 2a 
 
 Change the background color of the application
 
-Hint: This can be done graphically or in code. But more fun to do in code.
+Hint for iOS: This can be done graphically or in code. But more fun to do in code.
 Look up the properties of UIView.
+
+Hint for Android: Change the color of the relativelayout or edit the file activity_main.xml
+
 
 ### Oppgave 2b
 
 Change the app from the previous state of Oppgave 2a so that the background changes to a random color each time the button is clicked.
 
-Hint: Take a look at the UIColor class, arrays and the arc4random function
+Hint for iOS: Take a look at the UIColor class, arrays and the arc4random function
+
+Hint for Android: (import java.util.Random). Color.argb() can be useful.
 
 ### Oppgave 3
 
@@ -38,4 +47,4 @@ Choose an app icon for the application. We have some app icons generated already
 
 Change the application so that when the user exits and enter the app again, a new svada sentence is generated
 
-Hint: Have a variable in your AppDelegate class that refers to the ViewController instance
+Hint for iOS: Have a variable in your AppDelegate class that refers to the ViewController instance
