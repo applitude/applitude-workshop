@@ -29,11 +29,19 @@ In this case we unfortunately ahve to use a somewhat nasty function that swift h
 
 Go to the xcassets file
 
+![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%203a.png?raw=true)
+
 Click on the add button
+
+![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%203a..png?raw=true)
 
 Choose new app icon
 
+![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%203a...png?raw=true)
+
 Then you can just drag in any icons you want. We've dragged in a bunch from the resurs folder
+
+![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%203a....png?raw=true)
 
 ### Oppgave 4
 
