@@ -30,7 +30,9 @@ Change the app from the previous state of Oppgave 2a so that the background chan
 
 Hint: Take a look at the UIColor class, arrays and the arc4random function
 
+### Oppgave 3
 
+Choose an app icon for the application. We have some app icons generated already in our resurs folder that you can choose from. Go to the xcassets file and add an app icon. If you don't want to experiment yourself, see the solution page.
 
 ### Oppgave 4 (could be difficult for complete beginners)
 

@@ -37,20 +37,23 @@ class ViewController: UIViewController {
     
     public func saveBeforeQuit() {
         userDef.set(svadaLabel.text, forKey: "Svada")
-        
-        userDef.set(NSKeyedArchiver.archivedData(withRootObject: self.view.backgroundColor), forKey: "Bc color")
+        userDef.synchronize();
+        /*
+        userDef.set(NSKeyedArchiver.archivedData(withRootObject: self.view.backgroundColor), forKey: "Bc color")*/
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let svada = userDef.object(forKey: "Svada") {
+            print(svada as? String)
             svadaLabel.text = svada as? String
         }
         
+        /*
         if let colorData = userDef.object(forKey: "Bc color") {
             self.view.backgroundColor = NSKeyedUnarchiver.unarchiveObject(with: colorData as! Data) as? UIColor
-        }
+        }*/
         
         let appDelegateRef = UIApplication.shared.delegate as! AppDelegate
         
@@ -66,7 +69,6 @@ class ViewController: UIViewController {
             sentence += svadaArray[index][randomPhrase]
             sentence += index != svadaArray.count - 1 ? " " : "."
         }
-        print(sentence);
         return sentence
     }
 

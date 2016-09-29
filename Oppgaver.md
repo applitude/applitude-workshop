@@ -26,7 +26,12 @@ Endre fra oppgave 2a slik at bakgrunnsfargen endres til nye farger etterhvert so
 
 Hint: Se på UIColor klassen og arc4random funksjonen
 
-### Oppgave 3
+### Oppgave 3a
+
+Legg inn et app ikon. Vi har et utvalg av app ikoner i resursmappa vår på github som dere kan velge i fra. Gå i mappa Assets ved Svadageneratorfilene. Om du er nysgjerrig på stegene kan du se fasiten
+
+
+### Oppgave 3b
 
 Endre applikasjonen slik at den husker hvilken setning (og evt bakgrunnsfarge) når applikasjonen terminerer
 Det vil si at når brukeren åpner applikasjonen ETTER AT DEN ER TERMINERT så vil den ha samme setning og bakrgunnsfarge som da den terminerte

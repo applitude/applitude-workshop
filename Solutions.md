@@ -1,9 +1,7 @@
 #Løsningsforslag <img align="right" src="http://www.applitude.no/static/img/banner.svg" height="45"></div>
 
 ###### Disclaimer
-You would most likely have to be googeling a bit to solve many of these tasks. In fact, we encourage you to. We'll be strolling around, happy to answer any questions you may have! :)
-
-We decided to have the set of tasks written in English, since we know some of you are international students.
+We decided to have the set of solutions written in English, since we know some of you are international students.
 
 ### Oppgave 1a
 
@@ -26,6 +24,16 @@ This only involves one line of code which you could add to you viewDidLoad metho
 In this case we unfortunately ahve to use a somewhat nasty function that swift has inherited from it's Objective-C legacy. It's called arc4random_uniform. We basically have an array called colors of all our possible colors, and we select a random color from the array each time the button is clicked by using arc4random and assign it as a background color. Notice that the array is of type UIColor which is not explicitly declared in this example, but we could've done it if we wanted to. The arc4random function takes some weird types due to it's Objective-C nature, so we have to use some type casting. It generates a value between 0 and colors.count, which is the length of the array of colors which is then used as an index to access the elements in the array.
 
 ![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%202b.png)
+
+### Oppgave 3
+
+Go to the xcassets file
+
+Click on the add button
+
+Choose new app icon
+
+Then you can just drag in any icons you want. We've dragged in a bunch from the resurs folder
 
 ### Oppgave 4
 
