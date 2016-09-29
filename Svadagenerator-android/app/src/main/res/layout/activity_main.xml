@@ -18,14 +18,16 @@
         android:id="@+id/svadaText"
         android:textAlignment="center"
         android:paddingBottom="60dp"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_green_dark" />
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/svadaText"
         android:text="Gi meg svada!"
         android:layout_marginBottom="30dp"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        android:layout_height="50dp"
+        android:textSize="14sp" />
 
 </RelativeLayout>
