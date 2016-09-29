@@ -39,7 +39,7 @@ The problem now is that we have to initialize this variable with the instance of
 
 ![alt tag](https://github.com/applitude/applitude-workshop/blob/solution/Annet/Oppgave%204%20...png)
 
-We also have to move the code central to updating the view into it's own function instead of having it in the method that is triggered by the button. This makes it easier for us to call it from AppDelegate. 
+We also have to move the code central to updating the view into it's own function instead of having it in the method that is triggered by the button. This makes it easier for us to call it from AppDelegate. So in our ViewController we make this function. 
 
 Finally we have to call the function from AppDelegate. We use our reference and call it as a method on the ViewController object. And that's it!
  
