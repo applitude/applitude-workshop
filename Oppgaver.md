@@ -1,4 +1,5 @@
 #Oppgaver <img align="right" src="http://www.applitude.no/static/img/banner.svg" height="45"></div>
+[English version](https://github.com/applitude/applitude-workshop/blob/master/Tasks.md)
 
 Du må mest sannsynlig google en del for å løse mange av disse oppgavene. Vi oppfordrer deg faktisk sterkt til å gjøre det! Vi skal gå rundt, vi vil gjerne hjelpe deg med spørsmål som du måtte ha underveis :)
 
